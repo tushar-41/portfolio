@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import DarkModeProvider from "@/darkModeContext/DarkMode";
+import { Manrope } from "next/font/google";
 
-const inter = Inter();
+const manrope = Manrope({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${manrope.className} antialiased`}>
         <AuroraBackground>
           <DarkModeProvider>{children}</DarkModeProvider>
         </AuroraBackground>
