@@ -1,15 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import * as motion from "motion/react-client";
-import { NumberTicker } from "@/components/ui/number-ticker";
 import { DockDemo } from "@/components/Dock-bottom";
 import Navbar from "@/components/Navbar";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 const MainPage = () => {
   return (
     <div className="min-h-screen w-full flex flex-col gap-20 items-center justify-center dark:bg-black bg-white">
       <main className="flex gap-20 items-center justify-center mt-10">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="w-[30%] h-auto">
           <div className="mt-50">
             <motion.h1
@@ -37,43 +38,14 @@ const MainPage = () => {
           ></img>
         </div>
       </main>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
+      <section id="projects" className="dark:text-white min-w-3xl">
+        <Projects />
       </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
+      <section className="min-w-3xl" id="skills">
+        <h1 className="text-5xl font-bold">Skills</h1>
+        <Skills />
       </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-      <section id="system" className="dark:text-white text-5xl">
-        Hwlo heroo pages her e
-      </section>
-
+      <section className="h-50" id="contact"></section>
       <div className="fixed bottom-8">
         <DockDemo />
       </div>

@@ -8,6 +8,16 @@ export const useDarkMode = () => useContext(DarkModeContext);
 const DarkModeProvider = ({ children }) => {
   const [dark, setDark] = useState(false);
 
+  useEffect(() => {
+    const isDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    if (isDarkMode) {
+      document.querySelector("html").classList.add("dark");
+    }
+    return () => document.querySelector("html").classList.remove("dark");
+  }, []);
+
   const toggleDarkMode = () => {
     setDark((prev) => {
       const newTheme = !prev;
