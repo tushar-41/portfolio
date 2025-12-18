@@ -5,7 +5,7 @@ import { LocaleRouteNormalizer } from "next/dist/server/normalizers/locale-route
 const Projects = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold dark:text-white text-black/30 w-full">
+      <h1 className="text-5xl font-bold dark:text-white text-black/50 w-full">
         Projects
       </h1>
       <div className="md:grid md:grid-cols-2 gap-2">

@@ -6,7 +6,7 @@ const Skills = () => {
     <div className="h-30 max-w-3xl ">
       <div className="flex flex-wrap gap-4 mt-3">
         {allTechs.map((name, idx) => (
-          <TechUsed tech={`${name}`} key={idx} />
+          <TechUsed tech={`${name}`} key={idx} id={idx} />
         ))}
       </div>
     </div>

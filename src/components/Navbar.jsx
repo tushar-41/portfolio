@@ -14,6 +14,7 @@ const Navbar = () => {
     { name: "About", href: "/about" },
     { name: "Contact me", href: "/contact" },
     { name: "Projects", href: "/projects" },
+    { name: "Blogs", href: "#" },
   ];
 
   return (
@@ -21,30 +22,32 @@ const Navbar = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ scale: 0.95 }}
-      className="realtive h-20 w-[55%] fixed top-8 z-20 border border-none rounded-sm bg-[#080808]/50 backdrop-blur-sm text-2xl font-serif text-white/50 p-2"
+      className="realtive h-auto w-[55%] fixed top-8 z-20 border border-neutral-700 rounded-full bg-white text-black/50 backdrop-blur-lg text-2xl dark:bg-black/50 font-serif py-2 dark:border-white/30 dark:border-1"
     >
-      <div className="flex items-center justify-around absolute top-3 bottom-2 gap-4">
+      <div className="flex items-center gap-5 px-2">
+        <img
+          src="/pic-portfolio.jpg"
+          className="block size-10 rounded-full"
+        ></img>
         {navItems.map((item, idx) => (
           <button
+            key={idx}
             onClick={() => router.push(`${item.href}`)}
-            class="w-28 h-16 text-white cursor-pointer text-base font-bold 
-                         text-center border border-none bg-transparent
-                         shadow-[3px_3px_6px_rgb(34, 34, 34)] transition-transform duration-300 
-                         ease-in-out rounded-[10px] hover:bg-[#0c0c0c] hover:text-white"
+            className="hover:text-black hover:cursor-pointer dark:text-white/50 dark:hover:text-white"
           >
             {item.name}
           </button>
         ))}
       </div>
-      <div className="absolute right-5 bottom-6 m-2 h-5 w-5">
+      <div className="absolute right-5 bottom-5 m-2 size-3">
         {dark ? (
           <Sun
-            className="hover:cursor-pointer hover:text-white hover:scale-105"
+            className="hover:cursor-pointer hover:text-white hover:scale-105 dark:scale-100 transfor-transtion duration-300 scale-0 opacity-0 dark:opacity-100 text-white/50"
             onClick={() => toggleDarkMode()}
           />
         ) : (
           <Moon
-            className="hover:cursor-pointer hover:text-white hover:scale-105"
+            className="hover:cursor-pointer text-black/40 hover:text-black hover:scale-105 dark:scale-0 transform-transtion duration-400 scale-100 opacity-100 dark:opacity-0"
             onClick={() => toggleDarkMode()}
           />
         )}
